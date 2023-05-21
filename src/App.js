@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import ShoutInput from "./components/ShoutInput";
+import ShoutOutput from "./components/ShoutOutput";
+import { Container, Heading } from "@chakra-ui/react";
 
 function App() {
+  const [ shout, setShout ] = useState("");
+    
+  const changeHandler = e => {
+      setShout( e.target.value );
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container align='center'>
+      <Heading mt='20px'>Shout @ Me</Heading>
+      <ShoutInput shout={ shout } changeHandler={ changeHandler } />
+      <ShoutOutput shout={ shout } />
+    </Container>
   );
 }
 
