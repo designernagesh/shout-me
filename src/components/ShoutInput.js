@@ -4,7 +4,7 @@ const ShoutInput = ({shout, changeHandler}) => {
     return (
         <Box >
             <Heading as='h5' fontSize='20px' my='20px'>Input</Heading>
-            <Input type="text" value={ shout } onChange={ changeHandler } />
+            <Input type="text" TextAlign='center' value={ shout } onChange={ changeHandler } />
         </Box>
     )
 }

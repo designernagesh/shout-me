@@ -1,7 +1,7 @@
 const ShoutOutput = ({shout}) => {
     const outputStyle = {
         textAlign: 'center',
-        color: 'pink',
+        color: 'teal',
         fontSize: '100px',
         marginTop: '-10px',
     }
